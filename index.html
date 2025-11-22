@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arden Feudal Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              stone: {
+                850: '#292524',
+                900: '#1c1917',
+                950: '#0c0a09',
+              },
+              amber: {
+                450: '#b45309', // Darker gold
+                550: '#d97706',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+              serif: ['Cinzel', 'Georgia', 'Cambria', 'Times New Roman', 'serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.3s ease-in-out',
+              'slide-up': 'slideUp 0.4s ease-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(10px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        /* Radial gradient for depth */
+        background: radial-gradient(circle at top center, #1c1917 0%, #0c0a09 100%);
+        color: #d6d3d1; /* stone-300 */
+        min-height: 100vh;
+      }
+      /* Custom scrollbar for a rustic feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0c0a09;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #44403c;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #78716c;
+      }
+    </style>
+    <!-- Feudal Sickle & Hammer Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='wood' x1='0' y1='0' x2='100' y2='100'%3E%3Cstop offset='0' stop-color='%2378350f'/%3E%3Cstop offset='1' stop-color='%23451a03'/%3E%3C/linearGradient%3E%3ClinearGradient id='metal' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23e7e5e4'/%3E%3Cstop offset='1' stop-color='%2378716c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='%231c1917'/%3E%3C!-- Hammer --%3E%3Cpath d='M35 85 L65 55' stroke='url(%23wood)' stroke-width='8' stroke-linecap='round'/%3E%3Crect x='58' y='48' width='16' height='24' transform='rotate(-45 66 60)' fill='url(%23metal)' stroke='%230c0a09' stroke-width='1'/%3E%3C!-- Sickle --%3E%3Cpath d='M65 85 L35 55' stroke='url(%23wood)' stroke-width='8' stroke-linecap='round'/%3E%3Cpath d='M35 55 C 10 30, 10 10, 40 10 C 60 10, 65 25, 55 35' fill='none' stroke='url(%23metal)' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E" type="image/svg+xml">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "@supabase/supabase-js": "https://aistudiocdn.com/@supabase/supabase-js@^2.46.1"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
